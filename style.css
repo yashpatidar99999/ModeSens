@@ -1,0 +1,383 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@100;300;400;500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* utility classes */
+
+.text-crimson {
+  color: crimson;
+}
+
+.ptb-2 {
+  padding: 2rem 0;
+}
+
+/* utility classes ends */
+
+/* Navbar Styling */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: uppercase;
+  padding: 0 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+header .left,
+header .right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+header .left h1 {
+  font-family: "Dancing Script", cursive;
+}
+
+header .left nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+header .left nav a {
+  color: black;
+  transition: all 300ms ease;
+}
+
+header .left nav a:hover {
+  border-bottom: 1px solid crimson;
+}
+
+header .right .icons {
+  display: flex;
+  gap: 1rem;
+}
+
+header .right .search {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Hero Section Styling */
+section.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+}
+
+section.hero .container {
+  height: 500px;
+  width: 80%;
+  background-color: rgba(255, 255, 0, 0.423);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+section.hero .container .top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+}
+
+section.hero .container .text h1 {
+  font-size: 4.5rem;
+  font-weight: 600;
+  line-height: 80px;
+}
+
+section.hero .container .text h2 {
+  font-weight: 300;
+}
+
+section.hero .container .img img {
+  height: 300px;
+  width: 300px;
+}
+
+section.hero .container .search {
+  display: flex;
+  gap: 1.5rem;
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+}
+
+section.hero .container .search .search_box {
+  width: 80%;
+  outline: none;
+  border: none;
+  padding: 1rem;
+}
+
+section.hero .container .search .search_button {
+  width: 10%;
+  outline: none;
+  border: none;
+  padding: 1rem;
+  color: white;
+  background-color: rgb(189, 0, 0);
+}
+
+/* About Section Styling */
+section.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4rem 0;
+}
+
+section.about .container {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+}
+
+section.about .container .inner_container {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+}
+
+section.about .container .left {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 30%;
+}
+
+section.about .container .left h1 {
+  font-weight: 400;
+  font-size: 30px;
+}
+
+section.about .container .left p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+section.about .container .right {
+  width: 70%;
+}
+
+section.about a {
+  text-decoration: underline;
+}
+
+section.about .right img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Partner Section Styling */
+section.partner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+section.partner h1 {
+  text-transform: uppercase;
+}
+
+section.partner p {
+  color: rgb(108, 117, 125);
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+section.partner .logos {
+  overflow: hidden;
+  padding: 60px 0;
+  background: white;
+  white-space: nowrap;
+  position: relative;
+  width: 80%;
+}
+
+section.partner .logos:before,
+section.partner .logos:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+section.partner .logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+
+section.partner .logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+section.partner .logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+section.partner .logos-slide {
+  display: inline-block;
+  animation: 35s slide infinite linear;
+}
+
+section.partner .logos-slide img {
+  height: 50px;
+  margin: 0 40px;
+}
+
+/* Check Section Styling */
+section.check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section.check .innercontainer{
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(243, 243, 243);
+}
+
+section.check .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+  width: 80%;
+}
+
+section.check .left {
+  width: 28%;
+}
+
+section.check .left a {
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+section.check .right,
+section.check .left {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-direction: column;
+}
+
+section.check .right{
+  width: 50%;
+}
+
+/* Install Section Styling */
+section.install {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 4rem 0;
+}
+
+section.install .container {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  padding-top: 2rem;
+}
+
+section.install .left {
+  width: 35%;
+}
+
+section.install .left p {
+  text-align: justify;
+}
+
+section.install .left a {
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+section.install .right,
+section.install .left {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-direction: column;
+}
+
+section.install .right img {
+  width: 65%;
+}
+
+section.install button {
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: 2px solid crimson;
+  color: crimson;
+  text-transform: uppercase;
+  background: transparent;
+  cursor: pointer;
+  width: 70%;
+}
+
+/* Download Section Styling */
+section.download {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section.download .container {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+section.download img {
+  width: 400px;
+  height: 350px;
+}
+
+section.download .right {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 2rem;
+}
